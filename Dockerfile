@@ -4,12 +4,12 @@ WORKDIR /core
 
 ENV PATH="./node_modules/.bin:$PATH"
 
+RUN npm ci
 COPY . .
 
 # RUN apk update
 # RUN apk add nodejs
 
-RUN npm ci
 # RUN npm run build
 
 EXPOSE 3000
