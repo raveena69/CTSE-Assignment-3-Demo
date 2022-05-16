@@ -6,11 +6,11 @@ ENV PATH="./node_modules/.bin:$PATH"
 
 COPY . .
 
-RUN apk update
-RUN apk add nodejs
+# RUN apk update
+# RUN apk add nodejs
 
 RUN npm ci
-RUN npm run build
+# RUN npm run build
 
 EXPOSE 3000
 
