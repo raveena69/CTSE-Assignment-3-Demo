@@ -4,7 +4,10 @@ WORKDIR /core
 
 ENV PATH="./node_modules/.bin:$PATH"
 
+COPY . .
+
 RUN npm install
+
 COPY . .
 
 # RUN apk update
