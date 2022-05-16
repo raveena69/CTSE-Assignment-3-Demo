@@ -1,20 +1,11 @@
-FROM node:15.13-alpine
+FROM node:18-alpine3.14
 
-WORKDIR /core
-
-ENV PATH="./node_modules/.bin:$PATH"
+WORKDIR /app
 
 COPY . .
 
-RUN npm install
-
-COPY . .
-
-# RUN apk update
-# RUN apk add nodejs
-
-# RUN npm run build
+RUN npm i
 
 EXPOSE 3000
 
-CMD [ "npm", "start" ]
+CMD ["node", "index.js"]
