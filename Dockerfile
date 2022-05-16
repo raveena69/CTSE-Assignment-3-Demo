@@ -9,7 +9,7 @@ COPY . .
 RUN apk update
 RUN apk add nodejs
 
-RUN npm install
+RUN npm ci
 RUN npm run build
 
 EXPOSE 3000
